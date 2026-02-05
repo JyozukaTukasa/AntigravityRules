@@ -4,10 +4,22 @@ description: 出荷前の最終全チェックを行う（Test, Review, Sec, Per
 
 # 出荷パイプライン (The Ship Gate)
 
+Run: `cat .agent/rules/core.md .agent/rules/audit.md`
+(Current Phase: Stable)
+
 // turbo
-1. **ゲート1: 機能動作 (Test)**
-   Run: `npm test`
-   失敗したら即終了。
+1. **ゲート0: The Gatekeeper (Security Audit)**
+   Run: `@[/audit]`
+   厳格監査を通過していない変更は、テストすらさせない。
+   「監査レポートで Critical な指摘が0件であること」を確認する。
+
+2. **Full Regression Test (No Optimization)**
+   > [!IMPORTANT]
+   > ここでは **Smart Testing (高速化) は禁止** です。
+   > どんなに些細な変更でも、必ず全テストスイートを実行してください。
+   
+   Run: `npm test` (Must be Full Test)
+   もし失敗した場合、リリースは即中止となります。
 
 2. **ゲート2: コード品質 (Review)**
    `rules.md` 違反、命名規則違反がないか。

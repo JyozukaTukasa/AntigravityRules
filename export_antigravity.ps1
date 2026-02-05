@@ -1,5 +1,5 @@
 $packageName = "AntigravityKit"
-$files = @(".agent", ".github", "ANTIGRAVITY_MANUAL.md", "GEMINI.md")
+$files = @(".agent", ".github", "ANTIGRAVITY_MANUAL.md", "QUICK_GUIDE.md", "GEMINI.md")
 
 Write-Host "Creating $packageName.zip ..."
 

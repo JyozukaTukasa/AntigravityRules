@@ -12,8 +12,18 @@ description: プロジェクトの初期セットアップを行う（GEMINI.md�
    (仕様書などを格納する場所)
    Run: `mkdir docs`
 
-3. Linter/Formatterのセットアップ提案
+3. **Security Profile Selection (Auto-Config)**
+   「プロジェクトのセキュリティ要件を選択してください」と提示し、回答に基づいて `.agent/config.json` を生成する。
+   
+   *   **L1 (Startup)**: MVP/Prototype (Auth, PII only)
+   *   **L2 (Standard)**: SaaS Standard (Recommended)
+   *   **L3 (Enterprise)**: Fintech/Healthcare (All Layers)
+   *   **L4 (National)**: Defense (Air-gapped)
+   
+   Run: `echo '{"securityProfile": "L2", "description": "L2: Standard"}' > .agent/config.json` (Default)
+
+4. Linter/Formatterのセットアップ提案
    「開発効率向上のため、Linter (ESLint/Prettierなど) を導入しますか？技術スタックに合わせて設定を行えます。」と確認する。
 
-4. ユーザーへの確認
-   「GEMINI.md を作成しました。このプロジェクトで使用する技術スタック（言語・FW）を記述してください。」と伝える。
+5. ユーザーへの確認
+   「GEMINI.md を作成し、Security Profile を設定しました。最後に、技術スタック詳細を記述してください。」と伝える。

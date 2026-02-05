@@ -5,8 +5,9 @@ description: プロジェクト再開時に状況を瞬時に把握する（オ�
 # オンボーディング・ステータス確認
 
 1. プロジェクト情報の読み込み
-   `GEMINI.md`, `.agent/rules.md`, `task.md` (あれば) を読み込む。
-   Run: `cat GEMINI.md .agent/rules.md`
+   `GEMINI.md`, `.agent/rules/core.md`, `task.md` (あれば) を読み込む。
+   Run: `cat GEMINI.md .agent/rules/core.md`
+   (Check `task.md` via tools)
 
 2. 直近の作業状況の要約
    読み込んだ情報を元に、以下の3点を簡潔に（各1-2行）報告する。
@@ -15,6 +16,7 @@ description: プロジェクト再開時に状況を瞬時に把握する（オ�
    3. **次にやるべきタスクは何か？**
 
    出力例：
-   「おかえりなさい。これは『見積もり管理システム』のリプレイス案件です。
+   「おかえりなさい。現在のセキュリティレベルは **L2: Standard** です。
+   これは『見積もり管理システム』のリプレイス案件です。
    現在は『ユーザー管理機能』の実装が完了し、テストフェーズに入っています。
    次は『統合テストコードの作成 (integration_test.ts)』を行う必要があります。」

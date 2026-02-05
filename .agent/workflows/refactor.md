@@ -4,6 +4,11 @@ description: リファクタリングを行う（機能変更なし・安全性�
 
 # 安全なリファクタリング (Safe Refactoring)
 
+Run: `cat .agent/rules/core.md .agent/rules/coding.md`
+(Current Phase: Execution)
+
+1. **テストの存在確認 (Safety check)**
+
 // turbo
 1. **事前テスト (Baseline Check)**
    「壊れたコードをリファクタリングしてはいけません。」

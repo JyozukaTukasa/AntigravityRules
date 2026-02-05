@@ -4,6 +4,11 @@ description: 機能実装を行う（タスク分解～コーディング）
 
 # 実装フェーズ (Focus Implementation)
 
+Run: `cat .agent/rules/core.md .agent/rules/coding.md`
+(Current Phase: Execution)
+
+1. **設計の存在確認 (Safety Lock)**
+
 1. **設計の存在確認 (Safety Lock)**
    `docs/` 配下に設計ドキュメントが存在するか確認する。
    存在しない場合は「先に `@[/design]` を実行してください」と警告して終了する。
@@ -20,6 +25,10 @@ description: 機能実装を行う（タスク分解～コーディング）
 4. **実装実行**
    `current_task.md` の「防御策(Mitigation)」を確実に実装すること。
 
-4. **完了報告**
+   `current_task.md` の「防御策(Mitigation)」を確実に実装すること。
+
+4. **完了報告 & テスト (Auto-Test)**
    Run: `rm current_task.md`
-   「実装完了。次は `@[/test]` へ。」
+   // turbo
+   Run: `npm test`
+   「実装完了。テストも通過しました。次は `@[/ship]` へ。」

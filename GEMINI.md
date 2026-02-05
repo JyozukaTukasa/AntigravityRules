@@ -28,11 +28,24 @@
 
 ## 3. ディレクトリ構成 (Structure)
 - `.agent/`: エージェントの脳みそ（ルール本体）。
-- `.github/`: PRテンプレート。
-- `ANTIGRAVITY_MANUAL.md`: 人間用の操作マニュアル。
-- `AntigravityKit.zip`: 上記をまとめた配布用ファイル。
+  - `rules/`: 機能別に分割されたルール (`core.md`, `coding.md` etc.)。
+- `docs/`: プロジェクトの記憶（仕様書、設計図など）。
+- `GEMINI.md`: このファイル（目次）。
 
 ## 4. 今後の運用 (Roadmap)
-- 現状は **v1.0 (Stable)** である。
+- 現状は **v1.1 (Micro-Context Edition)** である。
 - 今後ルールを変更する場合は、本プロジェクトで修正 → Zip生成 → Push の手順を踏む。
 - 各プロジェクトは `@[/onboard]` で最新ルールに適応する。
+
+## 5. Security Context (Static Facts)
+- **Auth**: None (Documentation Repository - No Authentication required)
+- **Tenancy**: Single Tenant (Open Source Repository)
+- **PII Strategy**: **Zero Tolerance**. No PII allowed in any file.
+- **Infra/Edge**: GitHub Repository (Static Hosting)
+
+## 6. Current Phase (State Machine)
+- **Status**: **Stable** (Defensive Mode)
+  - _Planning_: 創造的・発散型。アイデア出し歓迎。
+  - _Design_: 構造化型。アーキテクチャ決定。
+  - _Execution_: 厳格・収束型。提案禁止、実装のみ。
+  - _Stable_: 防御型。変更を嫌い、整合性最優先。

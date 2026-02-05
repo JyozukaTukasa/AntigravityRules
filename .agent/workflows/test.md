@@ -5,8 +5,12 @@ description: テストコードの実行・修正を行う（Turboモード）
 # テストフェーズ (Turbo Test)
 
 // turbo
-1. **既存テストの実行**
-   Run: `npm test`
+8. **Smart Testing (Diff-Based)**
+   変更点から「影響を受けるテスト」のみを特定して実行する。
+   Run: `git diff --name-only main...HEAD` (変更ファイル特定)
+   
+   - 変更が少なければ: Run: `npm test -- --related $(git diff --name-only main...HEAD)`
+   - 変更が広範囲/特定不能なら: Run: `npm test` (Full Fallback)
 
 2. **テスト自動作成 (Auto-Gen)**
    テストファイルが見つからない、またはカバレッジが著しく低い場合、**ユーザーの許可を得ずに** 最低限のテストケース（正常系・異常系）を新規作成する。
