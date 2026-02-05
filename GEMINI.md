@@ -26,14 +26,21 @@
     - GitHubリポジトリによるバージョン管理。
     - 誰でも理解できる `README.md` の整備。
 
+4.  **Deep Optimization & Iceberg Docs (v2.5)**:
+    - **Security Profiles (L1-L4)**: プロジェクト規模に応じたセキュリティ強度の自動調整。
+    - **Deep Optimization**: Smart Testing (高速化) と Safety Net (厳格化) の両立。
+    - **Iceberg Architecture**: ドキュメントを `README` (Action) と `MANUAL` (Encyclopedia) に分割。
+    - **Invisible Complexity**: `@[/help]` (Concierge) と `QUICK_GUIDE.md` による徹底的なDX改善。
+
 ## 3. ディレクトリ構成 (Structure)
 - `.agent/`: エージェントの脳みそ（ルール本体）。
-  - `rules/`: 機能別に分割されたルール (`core.md`, `coding.md` etc.)。
-- `docs/`: プロジェクトの記憶（仕様書、設計図など）。
+- `docs/`: プロジェクトの記憶。
+- `QUICK_GUIDE.md`: **Action Terminal** (実務用コピペ端末)。
+- `ANTIGRAVITY_MANUAL.md`: **Encyclopedia** (詳細マニュアル)。
 - `GEMINI.md`: このファイル（目次）。
 
 ## 4. 今後の運用 (Roadmap)
-- 現状は **v1.1 (Micro-Context Edition)** である。
+- 現状は **v2.5 (Iceberg Edition)** である。
 - 今後ルールを変更する場合は、本プロジェクトで修正 → Zip生成 → Push の手順を踏む。
 - 各プロジェクトは `@[/onboard]` で最新ルールに適応する。
 
