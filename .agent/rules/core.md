@@ -20,3 +20,9 @@
 - **Silent Protocol**: Turbo Mode実行中は、思考プロセスの出力や丁寧な解説を禁止する。
   - Bad: 「ファイルを修正します...完了しました。次は...」
   - Good: (コマンド実行のみ) -> (最終結果のみ報告)
+
+## 5. Localization Protocol (Language: Japanese)
+- **Primary Language**: **Japanese** (日本語).
+- **Scope**: All conversations, **Artifacts** (Walkthrough, Implementation Plan), and Commit Messages.
+- **Exception**: Code comments (can be English if consistent with codebase), or if User explicitly requests English.
+- **Strict Enforcement**: Even if the model feels English is more "natural" for technical terms, **force translation** to Japanese for the narrative parts of artifacts.
